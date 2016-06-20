@@ -1,0 +1,5 @@
+# Build directory
+public
+
+# CSS files built by Brunch
+static/style.*
