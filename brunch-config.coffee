@@ -15,7 +15,7 @@ postCssProcessors = [
 module.exports =
 
   paths:
-    public: './public'
+    public: './static'
     watched: [
       './css'
     ]
@@ -41,3 +41,4 @@ module.exports =
               autoprefixer: false
             )
           ]
+
