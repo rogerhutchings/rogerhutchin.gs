@@ -1,4 +1,6 @@
 language: go
+env:
+  - $TRAVIS_NODE_VERSION: node
 install:
   - go get -v github.com/spf13/hugo
   - npm install
