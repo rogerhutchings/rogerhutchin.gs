@@ -5,7 +5,7 @@ html lang="en"
     meta charset="utf-8"
     meta name="viewport" content="width=device-width, initial-scale=1"
     {{ .Hugo.Generator }}
-    link rel="stylesheet" href="{{ .Site.BaseURL }}/style.css"
+    link rel="stylesheet" href="{{ .Site.BaseURL }}style.css"
     title Roger Hutchings &ndash; {{ .Title }}
 
   body class="pa3 mw7 center"
