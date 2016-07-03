@@ -1,9 +1,33 @@
 language: go
-env:
-  - $TRAVIS_NODE_VERSION: node
+
+cache:
+  directories:
+    - node_modules
+
+before_install:
+  - nvm install 4
+  - npm i -g npm@3
+  - npm config set spin false
+
 install:
   - go get -v github.com/spf13/hugo
   - npm install
+  - npm install -g brunch
+
+script:
+  - npm run build
+  - hugo
+
+deploy:
+  skip_cleanup: true
+  provider: s3
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
+  bucket: "rogtravistest"
+  acl: public_read
+  local_dir: public
+
 notifications:
   slack:
     secure: tsywOB/OAzF6vn9A9snfqBJaJr6vdd5PbOYAHSvbbWYemRkYsjfJC+SWaFEfYrAQMZZMXQX6lmS6HafB7uUU/rxtlfFHYolFiV0k4S3xKmxMzQP/EdbFZbfH3yj9SY8i2ZxH0UXOacZa5pEMjeiEKT1yx4JDicG1y5+l7R09m28yQrO9LHKIYauBMzSS4a/2JioKiubcplJg7nnL7Em1N1AbCkWgvPyOaPhB5Cp2gs5CaqQC4skcBjw5uhmH1JGTYfOFN37mu+XYBppgC7W+qnocNAJdBts9aXH+OmqK/zGsNhWf4FWB5eZ6NQb7eEIBmiOH/C1HGc/9UFZlwsF74Y5trSlpRgrbbhrRfnMuwPJYTUJlvvTWCUH9ae+TRl2jb0VNqmXtF81C8/cuKWYnyAugZnHkounb6s9jGpyg6jxEuYca9UK0lhUBcLWJJYJt/nc7gj8C9y6JSnXry79fUm1Rz73rueyFPTu/nKaa/LhiPhoxtEZIz2tfRXEzQ5sQIZGS02Qx6Ft+Z/EdEg08hHYiMlTgZyZBF7LpfIR2Zm0WirbtpEkIA5AfsTOmMNS1cUGqK2yPLp1RbDPkr+TI2LEYwu1BBeZP9PotNj0IdaENGgXFDsIDcI33HH7+3Lizelie6RDTUgWRjDlXUtzuh0PjJxnOGL606+Z0zQF+lsI=
+  email: false
