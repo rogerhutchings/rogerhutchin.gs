@@ -12,3 +12,7 @@ Start the project with:
 hugo server
 brunch watch
 ```
+
+## Deployment
+
+Travis automatically deploys changes to `master` straight to S3.
