@@ -1,5 +1,5 @@
-baseurl = "http://replace-this-with-your-hugo-site.com/"
-languageCode = "en-us"
+baseurl = "http://rogtravistest.s3-website-us-east-1.amazonaws.com/"
+languageCode = "en-gb"
 title = "My New Hugo Site"
 
 # https://gohugo.io/extras/menus/#section-menu-for-the-lazy-blogger
