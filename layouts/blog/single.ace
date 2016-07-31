@@ -1,9 +1,0 @@
-= content main
-
-  article
-    header
-      h1 {{ .Title }}
-      h2 {{ .Params.subtitle }}
-      div {{ dateFormat "January 2, 2006" .Date }}
-
-    {{ .Content }}

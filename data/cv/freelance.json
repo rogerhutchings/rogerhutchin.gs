@@ -1,0 +1,30 @@
+[
+    {
+        "title": "Director",
+        "link": "https://www.peroshi.com/",
+        "organisation": "Peroshi Ltd, UK",
+        "startDate": "December 2014",
+        "endDate": "Present",
+        "description": [
+            "I set up a small company to work on bespoke freelance projects. Aside from primarily Django development, I also meet and communicate with clients, spec projects, and seek out new business."
+        ]
+    },
+    {
+        "organisation": "Politics in Spires, University of Oxford",
+        "link": "http://politicsinspires.org/",
+        "startDate": "September 2012",
+        "endDate": "Present",
+        "description": [
+            "I created a custom WordPress theme, migrated the blog from basic hosting to an Ubuntu server, and carried out ongoing development and maintenance."
+        ]
+    },
+    {
+        "organisation": "Vincent's Club, University of Oxford",
+        "link": "http://vincents.org/",
+        "startDate": "September 2012",
+        "endDate": "July 2013",
+        "description": [
+            "The Vincent's Club of the University of Oxford commissioned me to produce a new site to allow them to connect with current and former members. I created a responsive WordPress site based a new premium theme, and customised it further with a secure Members' Area, including a searchable register."
+        ]
+    }
+]

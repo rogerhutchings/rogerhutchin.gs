@@ -1,2 +1,36 @@
 = content main
-  p This is the main page
+
+  section.cv-section
+    h2.title Employment
+    ol.content
+      {{ range $.Site.Data.cv.employment }}
+        li.item-detail
+          h3.title
+            a href={{ .link }} target=_blank {{ .organisation }}
+          h4.job-title {{ .title }}, {{ .endDate }}&ndash;{{ .startDate }}
+      {{ end }}
+
+  section.cv-section
+    h2.title Freelance
+    ol.content
+      {{ range $.Site.Data.cv.freelance }}
+        li.item-detail
+          h3.title
+            a href={{ .link }} target=_blank {{ .organisation }}
+          h4.job-title
+            {{ with .title }}{{ . }}, {{ end }}
+            {{ .endDate }}&ndash;{{ .startDate }}
+          {{ range .description }}
+            p {{ . }}
+          {{ end }}
+      {{ end }}
+
+  section.cv-section
+    h2.title Education
+    ol.content
+      {{ range $.Site.Data.cv.education }}
+        li.item-detail
+          h3.title
+            a href={{ .link }} target=_blank {{ .organisation }}
+          h4.item-subtitle {{ .course }} ({{ .result }}), {{ .startDate }}&ndash;{{ .endDate }}
+      {{ end }}

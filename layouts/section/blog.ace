@@ -1,8 +1,0 @@
-= content main
-  section id="main"
-
-    ul id="list"
-      {{ range .Data.Pages }}
-        li
-          a href="{{ .Permalink }}" {{ .Title }}
-      {{ end }}
