@@ -2,5 +2,4 @@ baseurl = "http://rogtravistest.s3-website-us-east-1.amazonaws.com/"
 languageCode = "en-gb"
 title = "My New Hugo Site"
 
-# https://gohugo.io/extras/menus/#section-menu-for-the-lazy-blogger
-SectionPagesMenu = "main"
+googleAnalytics = "UA-3651721-3"

@@ -31,3 +31,6 @@ html lang="en"
 
     footer
       p &copy; Roger Hutchings 2016
+
+
+    {{ template "_internal/google_analytics_async.html" . }}
