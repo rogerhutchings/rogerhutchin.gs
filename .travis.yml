@@ -1,22 +1,24 @@
-language: go
+sudo: false
+
+language: node_js
+
+node_js:
+  - "4"
 
 cache:
   directories:
     - node_modules
 
-before_install:
-  - nvm install 4
-  - npm i -g npm@3
-  - npm config set spin false
-
 install:
-  - go get -v github.com/spf13/hugo
+  - mkdir bin
+  - wget -O- https://github.com/spf13/hugo/releases/download/v0.16/hugo_0.16_linux-64bit.tgz | tar xvz -C ./bin
+  - ./bin/hugo version
   - npm install
   - npm install -g brunch
 
 script:
   - npm run build
-  - hugo
+  - ./bin/hugo
 
 deploy:
   skip_cleanup: true
