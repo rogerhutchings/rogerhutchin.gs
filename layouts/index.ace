@@ -1,36 +1,50 @@
 = content main
 
-  section.cv-section
-    h2.title Employment
-    ol.content
-      {{ range $.Site.Data.cv.employment }}
-        li.item-detail
-          h3.title
-            a href={{ .link }} target=_blank {{ .organisation }}
-          h4.job-title {{ .title }}, {{ .endDate }}&ndash;{{ .startDate }}
-      {{ end }}
+  article class="mw7 ph3 center"
 
-  section.cv-section
-    h2.title Freelance
-    ol.content
-      {{ range $.Site.Data.cv.freelance }}
-        li.item-detail
-          h3.title
-            a href={{ .link }} target=_blank {{ .organisation }}
-          h4.job-title
-            {{ with .title }}{{ . }}, {{ end }}
-            {{ .endDate }}&ndash;{{ .startDate }}
-          {{ range .description }}
-            p {{ . }}
-          {{ end }}
-      {{ end }}
+    header class="tc"
+      h1 class="normal mt5" Roger Hutchings
+      h2 class="normal" Front-end Developer
+      a.github href="https://github.com/rogerhutchings" GitHub
 
-  section.cv-section
-    h2.title Education
-    ol.content
-      {{ range $.Site.Data.cv.education }}
-        li.item-detail
-          h3.title
-            a href={{ .link }} target=_blank {{ .organisation }}
-          h4.item-subtitle {{ .course }} ({{ .result }}), {{ .startDate }}&ndash;{{ .endDate }}
-      {{ end }}
+    section
+      h2 class="f2" Employment
+      ol class="list pl0"
+        {{ range $.Site.Data.cv.employment }}
+          li.item-detail
+            h3 class="f5 mv1"
+              a href="{{ .link }}" target="_blank" {{ .organisation }}
+            h4 class="normal i f5 mv1" {{ .title }}, {{ .endDate }}&ndash;{{ .startDate }}
+            {{ with .description }}
+              {{ range . }}
+                p class="f5" {{ . }}
+              {{ end }}
+            {{ end }}
+        {{ end }}
+
+    section
+      h2 class="f2" Freelance
+      ol class="list pl0"
+        {{ range $.Site.Data.cv.freelance }}
+          li.item-detail
+            h3 class="f5 mv1"
+              a href="{{ .link }}" target="_blank" {{ .organisation }}
+            h4 class="normal i f5 mv1"
+              {{ with .title }}{{ . }}, {{ end }}
+              {{ .endDate }}&ndash;{{ .startDate }}
+            {{ with .description }}
+              {{ range . }}
+                p {{ . }}
+              {{ end }}
+            {{ end }}
+        {{ end }}
+
+    section
+      h2 class="f2" Education
+      ol class="list pl0"
+        {{ range $.Site.Data.cv.education }}
+          li.item-detail
+            h3 class="f5 mv1"
+              a href="{{ .link }}" target="_blank" {{ .organisation }}
+            h4 class="normal i f5 mv1" {{ .course }} ({{ .result }}), {{ .startDate }}&ndash;{{ .endDate }}
+        {{ end }}
