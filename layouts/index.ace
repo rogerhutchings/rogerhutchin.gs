@@ -17,7 +17,7 @@
             h4 class="normal i f5 mv1" {{ .title }}, {{ .endDate }}&ndash;{{ .startDate }}
             {{ with .description }}
               {{ range . }}
-                p class="f5" {{ . }}
+                p {{ . | markdownify }}
               {{ end }}
             {{ end }}
         {{ end }}

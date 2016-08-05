@@ -5,7 +5,11 @@
         "organisation": "Zooniverse, University of Oxford, UK",
         "startDate": "October 2014",
         "endDate": "Present",
-        "partial": "zooniverse"
+        "description": [
+          "I led the development of [AnnoTate](https://anno.tate.org.uk/), a web application enabling the collaborative transcription of works in the Tate Museums' archives. This uses a custom Rails REST API for the back-end and data aggregation, Angular, Stylus and Gulp. The code is [available on GitHub](https://github.com/zooniverse/AnnoTate).",
+          "I also contributed significantly to two other transcription projects: [Shakespeare's World](http://www.shakespearesworld.org/), in connection with the Folger Shakespeare Library, and [Old Weather](http://www.oldweather.org/), with the Meterological Office. Additionally, through my work on these projects I won a £50,000 research grant to study building citizen science projects on Facebook.",
+          "My role also involves managing a team of two, interviewing developer candidates, project management and scheduling, and mentoring newer developers."
+        ]
     },
     {
         "title": "Front End Developer",
